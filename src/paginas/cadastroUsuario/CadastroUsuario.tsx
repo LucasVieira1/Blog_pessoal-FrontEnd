@@ -6,6 +6,7 @@ import { cadastroUsuario } from '../../services/Service';
 import User from '../../models/User';
 
 import './CadastroUsuario.css'
+import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
     let history = useHistory();
@@ -50,15 +51,29 @@ function CadastroUsuario() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-
-        if (confirmarSenha === user.senha && user.senha.length >= 8 && user.nome.length >= 5 && user.usuario.length >= 15) {
-           await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-            alert('Usuario cadastrado com sucesso')
-
-        } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
-            setUser({...user, senha:""})
-            setConfirmarSenha("")
+        if(confirmarSenha == user.senha){
+       await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+        toast.success('Usuario cadastrado com sucesso', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+            });
+        }else{
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                });
         }
     }
 
