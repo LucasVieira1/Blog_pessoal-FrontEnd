@@ -1,4 +1,4 @@
-# :falafel: Blog Pessoal :hamburger:
+# 📚 Blog Pessoal 📚
 Projeto realizado durante o bootcamp da Generation Brasil - Desenvolvedor Web Java Junior
 ## :dart:Objetivo
 Para pessoas que desejam realizar postagens e interagir com outros usúarios, meu blog pessoal é um projeto realizado durante um bootcamp, me ajudou a se explorar e me desenvolver durante um desafio.
@@ -16,6 +16,6 @@ Para pessoas que desejam realizar postagens e interagir com outros usúarios, me
 *  React
 *  SQL
 
-## 📺 Projeto
+## 📽 Projeto
 * <a href="https://lucasblogpessoal.netlify.app/" title="Site">Clique Aqui</a>
 
